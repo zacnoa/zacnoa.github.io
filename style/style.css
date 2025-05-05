@@ -1,9 +1,4 @@
-.clear{
-    clear:both;
-}
-.left{
-    float:left;
-}
+
 html,body{
     margin:0;
     padding:0;
@@ -14,17 +9,22 @@ html,body{
 
 
 nav{
-    background-color: #FAEBD7;
-    padding:40px 40px;;
-    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f8dbb3;
+    padding:20px 40px;;
+    font-size: 1.8rem;
 }
 nav div{
     box-sizing: border-box;
-    width:33%;
+    width:30%;
     
 }
 nav img{
+    position:relative;
     text-align: center;
+    width:120px;
 }
 nav > :nth-child(1){
     display:flex;
