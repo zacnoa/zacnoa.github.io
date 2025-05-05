@@ -1,24 +1,45 @@
+.clear{
+    clear:both;
+}
+.left{
+    float:left;
+}
 html,body{
     margin:0;
     padding:0;
     font-size: 16px;
     background-color: #0A1172;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:"Montserrat Alternates", sans-serif;
 }
- nav .container{
-    display:flex;
-    justify-content: space-around;
- }
- nav a{
+
+
+nav{
+    background-color: #FAEBD7;
+    padding:40px 40px;;
+    font-size: 1.6rem;
+}
+nav div{
+    box-sizing: border-box;
+    width:33%;
+    
+}
+nav img{
     text-align: center;
+}
+nav > :nth-child(1){
+    display:flex;
+    justify-content: space-between;
+    column-gap: 32%         ;
+}
+nav > :nth-child(2){
+    text-align: center;
+}
+
+nav > :nth-child(3) a p{
+   margin:0;
+   text-align: center;
+}
+nav a{
     text-decoration: none;
     color:black;
-    font-weight: bold;
-    font-size:2rem;
- } 
-
-nav .container{
-    background-color:#FAEBD7;
-    padding: 25px;
-   
 }
