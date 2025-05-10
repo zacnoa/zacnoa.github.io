@@ -1,6 +1,9 @@
-let project_button=document.getElementById("project-button");
-let dropdown=document.getElementById("projects");
 
-function dropdown(){
-    
+
+function dropdownmenu(){
+
+    let id=setInterval(frame,5);
+
+     
+
 }

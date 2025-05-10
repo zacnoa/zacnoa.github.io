@@ -58,7 +58,7 @@ nav >:nth-child(3) a:hover + #projects{
 #projects:hover{
     transform: scaleY(1);
     opacity:1;
-    transition-delay: 1s;
+
 }
 nav > :nth-child(3):hover #projects ul{
     opacity:1;
@@ -70,7 +70,7 @@ nav > :nth-child(3) a p{
    text-align: center;
 }
 nav .left-right{
-    background:linear-gradient(to left, #f8dbb3 50%,  #FF6F61 50%) right;
+    background:linear-gradient(to left,  #f8dbb3 50%,  #FF6F61 50%) right;
     background-size: 200%;
     text-decoration: none;
     color:black;
@@ -90,8 +90,8 @@ nav .left-right:hover{
     position:absolute;
     background-color: #FF6F61;
     left:-50px;
-    padding:15px;
-    top:60px;
+    padding:15px 15px 15px 15px;
+    top:55px;
     border-radius: 35px;
     transform: scaleY(0);
     transform-origin: top;
