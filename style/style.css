@@ -1,14 +1,23 @@
 
-html,body{
+*{
     margin:0;
     padding:0;
+    box-sizing: border-box;
+    
+html,body{
+   
     font-size: 16px;
     background-color: #0A1172;
     font-family:"Montserrat Alternates", sans-serif;
 }
+    
+}
 
 
 nav{
+    position:fixed;
+    width:100%;
+    top:0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -17,8 +26,7 @@ nav{
     font-size: 1.8rem;
 }
 nav div{
-    box-sizing: border-box;
-    width:30%;
+    width:33%;
     
 }
 nav img{
@@ -28,11 +36,25 @@ nav img{
 }
 nav > :nth-child(1){
     display:flex;
-    justify-content: space-between;
-    column-gap: 32%         ;
+    column-gap: 50%         ;
+}
+nav > :nth-child(1) > :nth-child(1)
+{
+    margin-left:100px;
 }
 nav > :nth-child(2){
     text-align: center;
+}
+
+nav > :nth-child(3){
+    position:relative;
+}
+nav >:nth-child(3):hover #projects{
+    max-height: 280px;
+    padding:15px;
+}
+nav > :nth-child(3):hover #projects ul{
+    opacity:1;
 }
 
 nav > :nth-child(3) a p{
@@ -43,3 +65,24 @@ nav a{
     text-decoration: none;
     color:black;
 }
+#projects {
+    overflow:hidden;
+    max-height:0;
+    width:auto;
+    position:absolute;
+    background-color: #FF6F61;
+    border-radius: 35px;
+    left:-50px;
+    top:60px;
+    transition: all 0.5s ease;
+}
+#projects ul{
+    opacity:0;
+    display:inline-block;
+    list-style: none;
+    transition:all 0.5s ease;
+}
+#projects li{
+    margin-bottom:30px;
+}
+
