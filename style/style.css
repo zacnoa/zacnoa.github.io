@@ -58,10 +58,15 @@ nav >:nth-child(3) a:hover + #projects{
 #projects:hover{
     transform: scaleY(1);
     opacity:1;
-
 }
-nav > :nth-child(3):hover #projects ul{
+
+
+
+nav > :nth-child(3) a:hover + #projects ul{
     opacity:1;
+}
+nav > :nth-child(3) a:not(:hover) + #projects ul{
+    opacity:1;  
 }
 
 
@@ -76,13 +81,15 @@ nav .left-right{
     color:black;
     border-radius: 35px;
     padding:15px;
-    transition:all 0.35s ease;
+    transition:all 0.35s ease 0.1s;
 
 }
 
 nav .left-right:hover{
     background-position: left;
 }
+
+
 #projects {
     opacity:0;
     overflow:hidden;
@@ -95,16 +102,25 @@ nav .left-right:hover{
     border-radius: 35px;
     transform: scaleY(0);
     transform-origin: top;
-    transition: transform 0.5s ease, opacity 0.30s ease;
+    transition: transform 0.5s ease 0.1s, opacity 0.30s ease 0.1s;
 }
 #projects ul{
     opacity:0;
     display:inline-block;
     list-style: none;
-    transition:all 0.5s ease;
+    transition:all 0.5s ease 0.1s;
 }
 #projects li{
     margin-bottom:30px;
     
+}
+#projects li a:hover{
+    
+    color:white;
+}
+#projects li a{
+    color:black;
+    text-decoration: none;
+    transition:all 0.5s ease;
 }
 
