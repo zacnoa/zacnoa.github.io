@@ -3,6 +3,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+}
     
 html,body{
    
@@ -11,10 +12,11 @@ html,body{
     font-family:"Montserrat Alternates", sans-serif;
 }
     
-}
+
 
 
 nav{
+    z-index:2;
     position:fixed;
     width:100%;
     top:0;
@@ -122,5 +124,57 @@ nav .left-right:hover{
     color:black;
     text-decoration: none;
     transition:all 0.25s ease;
+}
+#project-button:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+main{
+    position:relative;
+    top:150px;
+}
+main h3{
+    font-size: 8rem;
+    color:#f8dbb3;
+}
+.banner{
+    width:70%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:0 auto;
+}
+.name-banner{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:46%;
+}
+.potrait-banner{
+    border:3px solid #FF6F61;
+    background-color: #f8dbb3;
+    padding:38px 1px 38px 1px;
+    text-align:center;
+    width:43.5%;
+    border-radius: 30px;
+
+}
+.potrait-banner img{
+    
+    width:500px;
+    height:700px;
+    border-radius: 30px ;
+}
+.center{
+    margin-left:-85px;
+    text-align: center;
+}
+.right{
+    text-align:right;
 }
 
