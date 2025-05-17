@@ -38,11 +38,11 @@ nav img{
 }
 nav > :nth-child(1){
     display:flex;
-    column-gap: 50%;
+    justify-content: space-between;
 }
 nav > :nth-child(1) > :nth-child(1)
 {
-    margin-left:100px;
+    margin-left:49px;
 }
 nav > :nth-child(2){
     text-align: center;
