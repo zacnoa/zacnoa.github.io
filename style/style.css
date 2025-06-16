@@ -186,7 +186,7 @@ main h3{
 .skills{
     margin-top:40px;
     position:relative;
-    height:500px;
+    height:550px;
     width:100%;
 
 }
@@ -217,7 +217,7 @@ main h3{
 
 .bubble3{
     top:100px;
-    right:120px;
+    left:80%;
 }
 
 
@@ -226,7 +226,7 @@ main h3{
     margin-top:15px;
     background:linear-gradient(to left,  #FF6F61 50%,  #f8dbb3 50%) right;
     background-size: 200%;
-    padding:10px;
+    padding:12px;
     cursor: pointer;
     display:inline-block;
     border-radius: 15px;
