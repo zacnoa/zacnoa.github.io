@@ -186,7 +186,8 @@ main h3{
 .skills{
     margin-top:40px;
     position:relative;
-    height:400px;
+    height:500px;
+    width:100%;
 
 }
 .bubble{
@@ -209,15 +210,30 @@ main h3{
     top:80px;
 }
 
+.bubble2{
+    top:300px;
+    left:25%;
+}
+
+.bubble3{
+    top:100px;
+    right:120px;
+}
+
 
 
 .button{
     margin-top:15px;
-    background-color: #FF6F61;
-    padding:15px;
+    background:linear-gradient(to left,  #FF6F61 50%,  #f8dbb3 50%) right;
+    background-size: 200%;
+    padding:10px;
     cursor: pointer;
     display:inline-block;
     border-radius: 15px;
+    transition: all 0.2s ease-in;
+}
+.button:hover{
+    background-position: left;
 }
 
 .bubble-transform{
