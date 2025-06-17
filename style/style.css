@@ -267,6 +267,15 @@ main h3{
   
 }
 
+.skills-banner{
+    font-size: 2.4rem;
+    color:#f8dbb3;
+    position:absolute;
+    left:50%;
+    top:5%;
+    transform:rotate(-30deg);;
+}
+
 
 @keyframes appear{
     0%{
