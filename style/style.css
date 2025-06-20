@@ -1,14 +1,27 @@
 
+
+
+:root{
+    --main: #0A1172;
+    --secondary: #FF6F61;
+    --ternary: #f8dbb3;
+    --button:#f8dbb3;
+    
+}
+
+
+
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
+    transition:all 0.4s linear;
 }
     
 html,body{
    
     font-size: 16px;
-    background-color: #0A1172;
+    background-color: var(--main);
     font-family:"Montserrat Alternates", sans-serif;
 }
     
@@ -23,36 +36,28 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #f8dbb3;
+    background-color: var(--ternary);
     padding:20px 40px;;
     font-size: 1.8rem;
 }
-nav div{
-    width:33%;
-    
-}
+
 nav img{
     position:relative;
     text-align: center;
     width:120px;
+    transform: translateX(-30px);
 }
-nav > :nth-child(1){
-    display:flex;
-    justify-content: space-between;
-}
-nav > :nth-child(1) > :nth-child(1)
-{
-    margin-left:49px;
-}
+
+
 nav > :nth-child(2){
     text-align: center;
 }
 
 
-nav > :nth-child(3){
+nav > :nth-child(4){
     position:relative;
 }
-nav >:nth-child(3) a:hover + #projects{
+nav >:nth-child(4) a:hover + #projects{
     transform: scaleY(1);
     opacity:1;
 }
@@ -64,21 +69,20 @@ nav >:nth-child(3) a:hover + #projects{
 
 
 
-nav > :nth-child(3) a:hover + #projects ul{
+nav > :nth-child(4) a:hover + #projects ul{
     opacity:1;
 }
-nav > :nth-child(3) a:not(:hover) + #projects ul{
+nav > :nth-child(4) a:not(:hover) + #projects ul{
     opacity:1;  
 }
 
-
-nav > :nth-child(3) a p{
+nav > :nth-child(4) a p{
    margin:0;
    text-align: center;
 }
 nav .left-right{
-    background:linear-gradient(to left,  #f8dbb3 50%,  #FF6F61 50%) right;
-    background-size: 200%;
+    background:linear-gradient(to left,  var(--ternary) 50%,  var(--secondary) 50%) right;
+    background-size: 201%;
     text-decoration: none;
     color:black;
     border-radius: 35px;
@@ -97,7 +101,7 @@ nav .left-right:hover{
     overflow:hidden;
     width:300px;
     position:absolute;
-    background-color: #FF6F61;
+    background-color: var(--secondary);
     left:-50px;
     padding:15px 15px 15px 15px;
     top:55px;
@@ -129,10 +133,127 @@ nav .left-right:hover{
     cursor: pointer;
 }
 
+#settings {
+    cursor:pointer;
+}
+.settings-menu{
+    
+    position: fixed;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:50%;
+    height: 600px;
+    background-color:#0f0f0f;
+    z-index: 3;
+    padding:30px;
+    border-radius: 15px;
+    border:none;
+    outline: none;
+}
 
+.settings-menu[open]:not(.closing) {
+    animation: rollIn 0.3s ease-out;
+}
+.settings-menu.closing {
+    animation: rollOut 0.3s ease-out;
+    animation-fill-mode: forwards;
+}
 
+@keyframes rollIn {
+    0%{
+        
+        left:-150%;
+    }
+    100%{
+     
+        left:50%;
+    }
+}
+@keyframes rollOut {
+    0%{
+        display:block;
+        left:50%;
+    }
+    100%{
+        left:-150%;
+        display:none;
+    }
+}
+.settings-menu .container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top:30%;
+    transform: translateY(-30%);
+}
+.settings-menu h2{
+    color:white;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    font-size: 3rem;
+}
+.option{
+    border-radius:15px;
+    width:150px;   
+    height:150px;
+    border:2px solid #0f0f0f;
+    transition: all 0,1s;
+    cursor: pointer;
+}
+.option:hover{
+    border:2px solid white;
+}
 
+.option.bo{
+     background-image: linear-gradient(45deg,#0A1172 50%, #FF6F61 51%);
+}
+.option.wb {
+    background-image: linear-gradient(45deg, #f8dbb3 50%, #FF6F61 51%);
+}
+.option.bp{
+    background-image: linear-gradient(45deg, #2F3C7E 50%, #FBEAEB 50%);
+}
+.settings-menu .exit{
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    top:15px;
+    right:15px;
+    display:inline-block;
+    padding:15px;
+    color:white;
+    border: 1px solid #0f0f0f;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.settings-menu .exit p{
+    display:block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+}
+.settings-menu .exit:hover {
+    border: 1px solid white;
+}
 
+.settings-menu::backdrop{
+   backdrop-filter: blur(10px);
+}
+@keyframes blurIn {
+    0%{
+        backdrop-filter: blur(0px);
+        
+    }
+    100%{
+        backdrop-filter: blur(10px);
+    }
+}
 
 main{
     position:relative;
@@ -140,7 +261,7 @@ main{
 }
 main h3{
     font-size: 10vw;
-    color:#f8dbb3;
+    color:var(--ternary);
 }
 .banner{
     width:70%;
@@ -156,7 +277,7 @@ main h3{
     width:45%;
 }
 .potrait-banner{
-    background-color: #f8dbb3;
+    background-color: var(--ternary);
     width:45%;
     border-radius: 30px;
     display:flex;
@@ -199,7 +320,7 @@ main h3{
     height:12vw;
     padding:15px;
     border-radius: 50%;
-    background-color: #FF6F61;
+    background-color: var(--secondary);
     transition: all 0.3s linear;
     position:absolute;
     z-index: 1;
@@ -225,7 +346,7 @@ main h3{
 
 .button{
     margin-top:15px;
-    background:linear-gradient(to left,  #FF6F61 50%,  #f8dbb3 50%) right;
+    background:linear-gradient(to left,  var(--secondary) 50%,  var(--button) 50%) right;
     background-size: 200%;
     padding:12px;
     cursor: pointer;
@@ -270,17 +391,17 @@ main h3{
 
 .skills-banner{
     font-size: 2.4rem;
-    color:#f8dbb3;
+    color:var(--ternary);
     position:absolute;
     left:50%;
     top:5%;
     transform:rotate(-30deg);;
 }
 .skills-banner h2{
-    color:#FF6F61;
+    color:var(--secondary);
 }
 .skills-banner span{
-    color:#f8dbb3;
+    color:var(--ternary);
 }
 
 
@@ -335,7 +456,6 @@ main h3{
 }
 .projects-section .container{
     width:80%;
-    background-color: #fadcb1;
     padding:30px;
     border-radius: 15px;
     display:flex;
@@ -349,16 +469,19 @@ main h3{
 }
 .projects-section .content{
     width:35%;
+    background-color: var(--ternary);
+    padding:40px;
+    border-radius: 15px;
+    line-height: 1.5rem;
 
 }
 .projects-section h2{
     font-size: 4rem;
-    color:#fadcb1;
+    color:var(--ternary);
 }
 footer{
     text-align: center;
-    background-color: #da7f00;
-    padding:15px;
+    background-color: var(--ternary);
+    padding:30px;
     font-weight: bold;
-    text-transform: uppercase;
 }

@@ -63,3 +63,45 @@ button3.addEventListener("click",function(){
         button3.firstChild.textContent="Read More";
     }
 })
+
+let colorOption1=document.getElementById("colorOption1");
+let colorOption2=document.getElementById("colorOption2");
+let colorOption3=document.getElementById("colorOption3");
+
+
+colorOption1.addEventListener("click",() =>{
+    let r=document.querySelector(":root");
+    r.style.setProperty("--main","#0A1172");
+    r.style.setProperty("--secondary","#FF6F61");
+    r.style.setProperty("--ternary", "#f8dbb3");
+});
+colorOption2.addEventListener("click",() =>{
+    let r=document.querySelector(":root");
+    r.style.setProperty("--main","#f8dbb3");
+    r.style.setProperty("--secondary","#FF6F61");
+    r.style.setProperty("--ternary", "#866262");
+});
+colorOption3.addEventListener("click",() =>{
+    let r=document.querySelector(":root");
+    r.style.setProperty("--main","#FBEAEB");
+    r.style.setProperty("--secondary","#866262");
+    r.style.setProperty("--ternary", "#2F3C7E");
+});
+
+
+let settingsButton=document.getElementById("settings");
+settingsButton.open
+settingsButton.addEventListener("click", () => {
+    document.querySelector(".settings-menu").classList.remove("closing");
+    document.querySelector(".settings-menu").showModal();
+});
+
+document.getElementById("exit").addEventListener("click", () => {
+    const menu = document.querySelector(".settings-menu");
+    menu.classList.add("closing");
+    menu.addEventListener("animationend", function handler() {
+        menu.close();
+        menu.classList.remove("closing");
+        menu.removeEventListener("animationend", handler);
+    });
+});
