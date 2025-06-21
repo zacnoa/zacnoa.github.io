@@ -6,6 +6,7 @@
     --secondary: #FF6F61;
     --ternary: #f8dbb3;
     --button:#f8dbb3;
+    --text: black;
     
 }
 
@@ -15,7 +16,6 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    transition:all 0.4s linear;
 }
     
 html,body{
@@ -40,7 +40,9 @@ nav{
     padding:20px 40px;;
     font-size: 1.8rem;
 }
-
+nav div{
+    cursor: pointer;
+}
 nav img{
     position:relative;
     text-align: center;
@@ -200,7 +202,7 @@ nav .left-right:hover{
     width:150px;   
     height:150px;
     border:2px solid #0f0f0f;
-    transition: all 0,1s;
+    transition: all 0.1s;
     cursor: pointer;
 }
 .option:hover{
@@ -472,6 +474,7 @@ main h3{
     background-color: var(--ternary);
     padding:40px;
     border-radius: 15px;
+    color:var(--text);
     line-height: 1.5rem;
 
 }
@@ -484,4 +487,84 @@ footer{
     background-color: var(--ternary);
     padding:30px;
     font-weight: bold;
+}
+
+
+
+@media only screen and (max-width: 600px)
+{
+    nav img {
+        width:40px;
+        transform: translateX(0);
+    }
+    nav{
+        font-size: 1rem;
+    }
+    .center{
+        margin-left: -30px;
+    }
+    .potrait-banner{
+        padding:3px;
+    }
+    .skills{
+         display:flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-between;
+         height:auto;
+         row-gap: 40px;
+    }
+    .bubble{
+        position:static;
+        width:50vw;
+        height: 50vw;
+        
+    }
+    .skills-banner{
+        position:static;
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+    }
+    .bubble-transform{
+        transform:none;
+        width:100%;
+        height:600px;
+    }
+    .skills .content{
+        font-size: 1rem;
+    }
+    .bubble .content-transform{
+    margin-top:15px;
+    animation:appear 0.72s;
+    width:90%;
+    height:100%;
+    display:block;
+    line-height: 1.4rem;
+    }
+    .projects-section h2{
+        font-size: 2rem;
+    }
+    .projects-section .container{
+        flex-direction: column;
+        width:90%;
+        row-gap: 30px;
+    }
+    .projects-section .container .content{
+        width:100%;
+    }
+    .projects-section .container img{
+        width:100%;
+    }
+    .settings-menu{
+        width:80%;
+    }
+    .settings-menu .option{
+        width:80px;
+        height:80px;
+    }
+    
+  
+}
+   
+
 }

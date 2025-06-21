@@ -74,18 +74,21 @@ colorOption1.addEventListener("click",() =>{
     r.style.setProperty("--main","#0A1172");
     r.style.setProperty("--secondary","#FF6F61");
     r.style.setProperty("--ternary", "#f8dbb3");
+    r.style.setProperty("--text", "black");
 });
 colorOption2.addEventListener("click",() =>{
     let r=document.querySelector(":root");
     r.style.setProperty("--main","#f8dbb3");
     r.style.setProperty("--secondary","#FF6F61");
     r.style.setProperty("--ternary", "#866262");
+    r.style.setProperty("--text", "black");
 });
 colorOption3.addEventListener("click",() =>{
     let r=document.querySelector(":root");
     r.style.setProperty("--main","#FBEAEB");
     r.style.setProperty("--secondary","#866262");
     r.style.setProperty("--ternary", "#2F3C7E");
+    r.style.setProperty("--text", "white");
 });
 
 
