@@ -39,6 +39,7 @@ nav{
     background-color: var(--ternary);
     padding:20px 40px;;
     font-size: 1.8rem;
+    color:var(--text);
 }
 nav div{
     cursor: pointer;
@@ -86,7 +87,7 @@ nav .left-right{
     background:linear-gradient(to left,  var(--ternary) 50%,  var(--secondary) 50%) right;
     background-size: 201%;
     text-decoration: none;
-    color:black;
+    color:var(--text);
     border-radius: 35px;
     padding:15px;
     transition:all 0.35s ease 0.1s;
