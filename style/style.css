@@ -573,7 +573,7 @@ footer{
    nav #project-button.left-right{
         transition: all 0.35s ease 0.1s;
          background:linear-gradient(to left,  var(--ternary) 50%,  var(--secondary) 50%) right;
-         background-size: 250%;
+         background-size: 210%;
         
    }
    #projects{
@@ -583,6 +583,7 @@ footer{
     nav .left-right{
         transition: none;
         background-image: none;
+        padding:10px;
         
     }
     .skills .button{
