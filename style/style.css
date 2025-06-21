@@ -569,16 +569,16 @@ footer{
         width:80px;
         height:80px;
     }
-    .button:active{
-    background-position: left;
-    *{
-        transition: none;
-    }
+   
     #projects{
         transition: transform 0.5s ease 0.1s, opacity 0.30s ease 0.1s;
+        font-size: 1rem;
+    }
+    .left-right{
+        transition: none;
     }
 }
   
-}
+
    
 
