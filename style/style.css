@@ -570,14 +570,25 @@ footer{
         height:80px;
     }
    
-    #projects{
-        transition: transform 0.5s ease 0.1s, opacity 0.30s ease 0.1s;
-        font-size: 1rem;
-    }
-    .left-right{
+   nav #project-button.left-right{
+        transition: all 0.35s ease 0.1s;
+         background:linear-gradient(to left,  var(--ternary) 50%,  var(--secondary) 50%) right;
+         background-size: 200%;
+        
+   }
+   #projects{
+    width:150px;
+   }
+    nav .left-right{
         transition: none;
+        background-image: none;
+        
+    }
+    .skills .button{
+        background-image: none
     }
 }
+
   
 
    
